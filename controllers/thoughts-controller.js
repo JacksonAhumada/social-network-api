@@ -1,9 +1,9 @@
-const { Thoughts, User, Reaction } = require('../models');
+const { Thoughts, User } = require('../models');
 
 const thoughtsController = {
     getAllThoughts(req, res) {
         Thoughts.find({})
-            .then((dbThougtsData) => res.json(dbThoughtsData))
+            .then((dbThoughtsData) => res.json(dbThoughtsData))
             .catch((err) => {
                 console.log(err);
                 res.status(400).json(err);
