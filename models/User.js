@@ -22,14 +22,14 @@ const UserSchema = new Schema(
       },
       message: props => `${props.value} is not a valid email!` 
     },
-    thoughts: {
+    thoughts: [{
       type: Schema.Types.ObjectId,
       ref: 'Thoughts'
-    },
-    friends: {
+    }],
+    friends: [{
       type: Schema.Types.ObjectId,
       ref: 'User'
-    }
+    }]
   },
   {
     toJSON: {

@@ -5,13 +5,14 @@ const ThoughtsSchema = new Schema({
     type: String,
     required: true,
     trim: true,
-    minlength: 1
+    minlength: 1,
+    max_length: 250
   },
   userName: {
     type: String,
     required: true,
   },
-  reactions: [ReactionSchema]
+  reactions: [{ ReactionSchema }]
 },
   {
     toJSON: {
