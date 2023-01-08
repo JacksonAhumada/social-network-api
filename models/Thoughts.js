@@ -5,8 +5,7 @@ const ThoughtsSchema = new Schema({
     type: String,
     required: true,
     trim: true,
-    minlength: 1,
-    maxlength: 250,
+    minlength: 1
   },
   userName: {
     type: String,

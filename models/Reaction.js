@@ -1,30 +1,28 @@
-const { Schema, model, Types } = require('mongoose');
+const { Schema, model, Types } = require("mongoose");
 
 // Schema to create a reaction model
 
 const ReactionSchema = new Schema(
   {
     reactionsId: {
-      type: Schema.Types.Objectid,
-      default: () => new Types.ObjectId()
+      type: Schema.Types.ObjectId,
+      default: () => new Types.ObjectId(),
     },
     reactionsBody: {
       type: String,
-      required: true
+      required: true,
     },
     userName: {
       type: String,
-      required: true
-    }
+      required: true,
+    },
   },
   {
     toJSON: {
-      getters: true
+      getters: true,
     },
-    id: false
+    id: false,
   }
 );
 
-const Reaction = model('Reaction', ReactionSchema)
-
-module.exports = Reaction;
+module.exports = ReactionSchema;
